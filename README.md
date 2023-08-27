@@ -26,12 +26,11 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
       - Press Enter to run the script.
 
 
-Follow the Prompts:
+5. **Follow the Prompts**:
+      - The tool will fetch your 'Not Interested' list, show you the number of items to remove, and ask for confirmation.
+      - If you confirm, the tool will start removing items one by one with a short pause between each removal.
 
-The tool will fetch your 'Not Interested' list, show you the number of items to remove, and ask for confirmation.
-If you confirm, the tool will start removing items one by one with a short pause between each removal.
 Wait for Completion:
-
 The tool will display progress messages in the developer console. Wait until it completes all removals.
 Done!
 
