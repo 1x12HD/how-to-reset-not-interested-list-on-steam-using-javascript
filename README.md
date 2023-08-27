@@ -31,7 +31,6 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 
 6. **Wait for Completion**:
       - The tool will display progress messages in the developer console. Wait until it completes all removals.
-
 **Done!**
       - Once all items are removed, you will receive an alert confirming that your 'Not Interested' list is clear.
 
