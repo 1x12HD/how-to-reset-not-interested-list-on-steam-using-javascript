@@ -17,7 +17,6 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 
 3. **Copy the JavaScript Code**:
      - Go to the [GitHub repository](https://github.com/0x12HD/How-to-Reset-Not-Interested-List-on-Steam/blob/main/reset-not%20Interested-list.js) where you found this tool.
-     - Locate the JavaScript code in the repository (usually found in a .js file).
      - Click the "Raw" button to view the code in raw format.
      - Copy the entire code.
    
@@ -44,4 +43,7 @@ Error Handling: If you encounter any errors, such as network issues or incorrect
 
 Use Responsibly: Please use this tool responsibly and in accordance with Steam's terms of service. It's intended for personal use to manage your 'Not Interested' list.
 
+
+## How to Paste the Code in Your Browser - Video
+![How to reset Not Interested list](https://github.com/0x12HD/How-to-Reset-Not-Interested-List-on-Steam/assets/123062939/440ac70c-0cbc-45ef-9d66-44f9fd621d0e)
 
