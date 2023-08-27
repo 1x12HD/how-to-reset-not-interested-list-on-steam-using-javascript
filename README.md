@@ -22,7 +22,7 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 3. **Paste and Execute the Code**:
       - In the developer console that you opened in step 2, paste the copied JavaScript code.
 
-4. Run the Tool:
+4. **Run the Tool**:
       - Press Enter to run the script.
 
 
