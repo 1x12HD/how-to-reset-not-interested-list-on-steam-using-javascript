@@ -9,7 +9,7 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
    * Open your Steam client or the Steam website and log in to your account.
 
 2. **Open the Browser's Developer Console**:
-* Depending on your browser:
+ * Depending on your browser:
   * In Google Chrome and Microsoft Edge, press Ctrl + Shift + J (or Cmd + Option + J on macOS) to open the developer console.
   * In Mozilla Firefox, press Ctrl + Shift + K (or Cmd + Option + K on macOS) to open the developer console.
 
