@@ -8,7 +8,7 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 
 ## Instructions
 1. **Access Your 'Not Interested' List**:
-   * Open your Steam client or the Steam website and log in to your account.
+   * Open your Steam website and log in to your account.
 
 2. **Open the Browser's Developer Console**:
      * Depending on your browser:
