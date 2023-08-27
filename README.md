@@ -7,10 +7,10 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 ## Instructions
 1. **Access Your 'Not Interested' List**:
    * Open your Steam client or the Steam website and log in to your account.
-Open the Browser's Developer Console:
 
-Depending on your browser:
-In Google Chrome and Microsoft Edge, press Ctrl + Shift + J (or Cmd + Option + J on macOS) to open the developer console.
+**Open the Browser's Developer Console**:
+* Depending on your browser:
+ * In Google Chrome and Microsoft Edge, press Ctrl + Shift + J (or Cmd + Option + J on macOS) to open the developer console.
 In Mozilla Firefox, press Ctrl + Shift + K (or Cmd + Option + K on macOS) to open the developer console.
 Copy the JavaScript Code:
 
