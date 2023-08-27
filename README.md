@@ -16,7 +16,7 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
      * In Mozilla Firefox, press Ctrl + Shift + K (or Cmd + Option + K on macOS) to open the developer console.
 
 3. **Copy the JavaScript Code**:
-     - Go to the GitHub repository where you found this tool.
+     - Go to the [GitHub repository]([https://www.google.com](https://github.com/0x12HD/How-to-Reset-Not-Interested-List-on-Steam/blob/main/reset-not%20Interested-list.js)) where you found this tool.
      - Locate the JavaScript code in the repository (usually found in a .js file).
      - Click the "Raw" button to view the code in raw format.
      - Copy the entire code.
