@@ -1,10 +1,10 @@
 ## How to Use the Steam 'Not Interested' List Clearing Tool
 Welcome to the Steam 'Not Interested' List Clearing Tool! This tool allows you to easily clear games from your 'Not Interested' list on the Steam platform. Follow the simple steps below to get started.
 
-# Prerequisites
+## Prerequisites
 A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Firefox for this tool.
 
-Instructions
+## Instructions
 Access Your 'Not Interested' List:
 
 Open your Steam client or the Steam website and log in to your account.
