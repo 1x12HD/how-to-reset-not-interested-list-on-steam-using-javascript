@@ -13,7 +13,7 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 2. **Open the Browser's Developer Console**:
      * Depending on your browser:
        - In Google Chrome and Microsoft Edge, press Ctrl + Shift + J (or Cmd + Option + J on macOS) to open the developer console.
-       -In Mozilla Firefox, press Ctrl + Shift + K (or Cmd + Option + K on macOS) to open the developer console.
+       - In Mozilla Firefox, press Ctrl + Shift + K (or Cmd + Option + K on macOS) to open the developer console.
 
 3. **Copy the JavaScript Code**:
      - Go to the [GitHub repository](https://github.com/0x12HD/How-to-Reset-Not-Interested-List-on-Steam/blob/main/reset-not%20Interested-list.js) where you found this tool.
