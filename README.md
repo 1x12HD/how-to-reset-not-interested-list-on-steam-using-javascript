@@ -29,11 +29,12 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
       - The tool will fetch your 'Not Interested' list, show you the number of items to remove, and ask for confirmation.
       - If you confirm, the tool will start removing items one by one with a short pause between each removal.
 
-Wait for Completion:
-The tool will display progress messages in the developer console. Wait until it completes all removals.
-Done!
+6. **Wait for Completion**:
+      - The tool will display progress messages in the developer console. Wait until it completes all removals.
 
-Once all items are removed, you will receive an alert confirming that your 'Not Interested' list is clear.
+**Done!**
+      - Once all items are removed, you will receive an alert confirming that your 'Not Interested' list is clear.
+
 Important Notes
 Be Patient: The tool removes items one by one with a delay to prevent server overload. It may take some time to clear your entire list, depending on its size.
 
