@@ -9,6 +9,7 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 ## Instructions
 1. **Access Your 'Not Interested' List**:
    * Open your Steam website and log in to your account.
+   * Here is a link for your personally ignored products: https://store.steampowered.com/account/notinterested/
 
 2. **Open the Browser's Developer Console**:
      * Depending on your browser:
