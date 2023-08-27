@@ -35,7 +35,7 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 7. **Done!**
       - Once all items are removed, you will receive an alert confirming that your 'Not Interested' list is clear.
 
-Important Notes
+### Important Notes
 Be Patient: The tool removes items one by one with a delay to prevent server overload. It may take some time to clear your entire list, depending on its size.
 
 Error Handling: If you encounter any errors, such as network issues or incorrect session ID, the tool will provide error messages in the developer console. Follow any instructions provided to address these issues.
