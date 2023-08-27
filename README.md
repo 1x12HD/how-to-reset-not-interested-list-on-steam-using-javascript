@@ -1,8 +1,3 @@
-# How-to-Reset-Not-Interested-List-on-Steam
-Simple Javascript code that resets your "not interested" list on Steam
-
-
-
 ## How to Use the Steam 'Not Interested' List Clearing Tool
 Welcome to the Steam 'Not Interested' List Clearing Tool! This tool allows you to easily clear games from your 'Not Interested' list on the Steam platform. Follow the simple steps below to get started.
 
