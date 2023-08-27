@@ -18,11 +18,11 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
      - Locate the JavaScript code in the repository (usually found in a .js file).
      - Click the "Raw" button to view the code in raw format.
      - Copy the entire code.
-     - Paste and Execute the Code:
+   
+3. **Paste and Execute the Code**:
+  * In the developer console that you opened in step 2, paste the copied JavaScript code.
 
-In the developer console that you opened in step 2, paste the copied JavaScript code.
 Run the Tool:
-
 Press Enter to run the script.
 Follow the Prompts:
 
