@@ -25,7 +25,6 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 4. **Run the Tool**:
       - Press Enter to run the script.
 
-
 5. **Follow the Prompts**:
       - The tool will fetch your 'Not Interested' list, show you the number of items to remove, and ask for confirmation.
       - If you confirm, the tool will start removing items one by one with a short pause between each removal.
