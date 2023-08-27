@@ -22,8 +22,10 @@ A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Fire
 3. **Paste and Execute the Code**:
      - In the developer console that you opened in step 2, paste the copied JavaScript code.
 
-Run the Tool:
-Press Enter to run the script.
+4. Run the Tool:
+- Press Enter to run the script.
+
+
 Follow the Prompts:
 
 The tool will fetch your 'Not Interested' list, show you the number of items to remove, and ask for confirmation.
