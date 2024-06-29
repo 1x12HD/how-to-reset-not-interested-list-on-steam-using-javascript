@@ -44,7 +44,3 @@ This script is not officially associated with or endorsed by Steam or Valve Corp
 ## Contributing
 
 Feel free to fork this project and submit pull requests with improvements or bug fixes. Issues and feature requests are also welcome in the project's issue tracker.
-
-## How to Paste the Code in Your Browser
-![How to reset Not Interested list](https://github.com/0x12HD/How-to-Reset-Not-Interested-List-on-Steam/assets/123062939/440ac70c-0cbc-45ef-9d66-44f9fd621d0e)
-
