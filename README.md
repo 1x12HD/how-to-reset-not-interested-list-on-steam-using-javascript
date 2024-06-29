@@ -1,49 +1,49 @@
-## How to Use the Steam 'Not Interested' List Clearing Tool
-Welcome to the Steam 'Not Interested' List Clearing Tool! This tool allows you to easily clear games from your 'Not Interested' list on the Steam platform. Follow the simple steps below to get started.
+# Steam 'Not Interested' List Clearing Tool
 
-_This is originally from Kevin Yew (Thanks!), but I have cleaned it up, added more in-depth code, and included the latest version._
+Welcome to the Steam 'Not Interested' List Clearing Tool! This script allows you to easily remove games from your 'Not Interested' list on the Steam platform. Follow the simple steps below to get started.
 
-## Prerequisites
-A Modern Web Browser: You can use Google Chrome, Microsoft Edge, or Mozilla Firefox for this tool.
+This tool is based on an original concept by Kevin Yew. The current version has been significantly expanded, with improved code and additional features.
 
-## Instructions
-1. **Access Your 'Not Interested' List**:
-   * Open your Steam website and log in to your account.
-   * Here is a link for your personally ignored products: https://store.steampowered.com/account/notinterested/
+## How It Works
 
-2. **Open the Browser's Developer Console**:
-     * Depending on your browser:
-        - In Google Chrome and Microsoft Edge, press Ctrl + Shift + J (or Cmd + Option + J on macOS) to open the developer console.
-        - In Mozilla Firefox, press Ctrl + Shift + K (or Cmd + Option + K on macOS) to open the developer console.
+1. **Fetching the List**: The script first retrieves the user's 'Not Interested' list from Steam's servers.
 
-3. **Copy the JavaScript Code**:
-     - Go to the [GitHub repository](https://github.com/0x12HD/How-to-Reset-Not-Interested-List-on-Steam/blob/main/reset-not%20Interested-list.js)
-     - Click the "Raw" button to view the code in raw format.
-     - Copy the entire code.
-   
-3. **Paste and Execute the Code**:
-      - In the developer console that you opened in step 2, paste the copied JavaScript code.
+2. **User Confirmation**: It then asks for user confirmation, displaying the number of games to be removed.
 
-4. **Run the Tool**:
-      - Press Enter to run the script.
+3. **Removal Process**: If confirmed, the script proceeds to remove each game from the list one by one.
 
-5. **Follow the Prompts**:
-      - The tool will fetch your 'Not Interested' list, show you the number of items to remove, and ask for confirmation.
-      - If you confirm, the tool will start removing items one by one with a short pause between each removal.
+4. **Rate Limiting**: To avoid overwhelming Steam's servers, there's a short pause between each removal.
 
-6. **Wait for Completion**:
-      - The tool will display progress messages in the developer console. Wait until it completes all removals.
+5. **Progress Updates**: The script provides console logs to show progress and any errors that occur.
 
-7. **Done!**
-      - Once all items are removed, you will receive an alert confirming that your 'Not Interested' list is clear.
+6. **Completion**: Once finished, it alerts the user that all games have been removed.
 
-### Important Notes
-Be Patient: The tool removes items one by one with a delay to prevent server overload. It may take some time to clear your entire list, depending on its size.
+## Usage
 
-Error Handling: If you encounter any errors, such as network issues or incorrect session ID, the tool will provide error messages in the developer console. Follow any instructions provided to address these issues.
+1. Open your web browser's console on the Steam store page. 
+   - Chrome: Right-click > Inspect > Console
+   - Firefox: Right-click > Inspect Element > Console
 
-Use Responsibly: Please use this tool responsibly and in accordance with Steam's terms of service. It's intended for personal use to manage your 'Not Interested' list.
+2. Copy the entire script and paste it into the console.
 
+3. Press Enter to run the script.
+
+4. Follow the on-screen prompts to confirm and complete the process.
+
+## Important Notes
+
+- This script requires you to be logged into your Steam account in the browser.
+- It uses the `g_sessionID` variable, which should be automatically available when logged into Steam.
+- The script respects Steam's systems by implementing pauses between actions.
+- While efforts have been made to handle errors gracefully, use this script at your own risk.
+
+## Disclaimer
+
+This script is not officially associated with or endorsed by Steam or Valve Corporation. Use it responsibly and at your own discretion. The authors are not responsible for any unintended consequences of using this script.
+
+## Contributing
+
+Feel free to fork this project and submit pull requests with improvements or bug fixes. Issues and feature requests are also welcome in the project's issue tracker.
 
 ## How to Paste the Code in Your Browser
 ![How to reset Not Interested list](https://github.com/0x12HD/How-to-Reset-Not-Interested-List-on-Steam/assets/123062939/440ac70c-0cbc-45ef-9d66-44f9fd621d0e)
