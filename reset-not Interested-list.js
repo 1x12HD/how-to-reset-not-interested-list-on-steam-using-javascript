@@ -1,124 +1,91 @@
 (async function() {
-    // Define constants
-    const PAUSE_INTERVAL = 500;
+    // Set up important constants
+    const PAUSE_INTERVAL = 500; // Time to wait between removing games (in milliseconds)
     const STEAM_API_URL = "https://store.steampowered.com";
     const NOT_INTERESTED_LIST_ENDPOINT = "/dynamicstore/userdata";
     const REMOVE_APP_ENDPOINT = "/recommended/ignorerecommendation/";
 
-    try {
-        // Function to reset the 'Not Interested' list
-        async function resetNotInterestedList() {
-            // Fetch the list of ignored apps
-            const ignoredApps = await fetchIgnoredApps();
-
-            // Calculate the total number of items in the list
-            const totalItems = ignoredApps.length;
-
-            // Display a message if the list is empty
-            if (totalItems === 0) {
-                alert("Your 'Not Interested' list is empty.");
-                return;
-            }
-
-            // Confirm with the user before proceeding
-            const approval = confirm(`You are about to remove ${totalItems} games from your 'Not Interested' list. Proceed?`);
-
-            // If the user cancels, stop the process
-            if (!approval) {
-                return;
-            }
-
-            // Start removing apps from the list
-            await removeAppsFromList(ignoredApps);
-        }
-
-        // Function to fetch the list of ignored apps
-        async function fetchIgnoredApps() {
-            const response = await fetch(`${STEAM_API_URL}${NOT_INTERESTED_LIST_ENDPOINT}?t=${new Date().getTime()}`);
-
-            // Check if the request was successful
-            if (!response.ok) {
-                throw new Error("Failed to retrieve 'Not Interested' list.");
-            }
-
-            const data = await response.json();
-            return Object.keys(data.rgIgnoredApps);
-        }
-
-        // Function to remove apps from the list
-        async function removeAppsFromList(appList) {
-            for (let i = 0; i < appList.length; i++) {
-                try {
-                    // Remove each app from the list
-                    await removeAppFromList(appList[i]);
-
-                    // Log the progress
-                    console.log(`Removed ${i + 1}/${appList.length} items`);
-
-                    // Pause for the specified interval
-                    await sleep(PAUSE_INTERVAL);
-                } catch (error) {
-                    console.error("An error occurred while removing an item:", error.message);
-                }
-            }
-
-            // Display a message when all items are removed
-            alert("All items cleared from 'Not Interested' list.");
-        }
-
-        // Function to remove a single app from the list
-        async function removeAppFromList(appId) {
-            const formData = new FormData();
-            formData.append("sessionid", g_sessionID);
-            formData.append("appid", appId);
-            formData.append("remove", 1);
-            formData.append("snr", "1_account_notinterested_");
-
-            // Make a POST request to remove the app
-            const response = await fetch(`${STEAM_API_URL}${REMOVE_APP_ENDPOINT}`, {
-                method: "POST",
-                body: formData,
-            });
-
-            // Check if the request was successful
-            if (!response.ok) {
-                throw new Error("Failed to remove an item from 'Not Interested' list.");
-            }
-        }
-
-        // Function to pause execution for a specified duration
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        // Additional code and features can be added here to extend the length further
-
-        // Example feature: Display a summary of removed apps
-        function displaySummary(removedCount) {
-            const summaryMessage = `Successfully removed ${removedCount} apps from the list.`;
-            console.log(summaryMessage);
-            alert(summaryMessage);
-        }
-
-        // Example feature: Log session information
-        function logSessionInfo(sessionID) {
-            console.log(`Session ID: ${sessionID}`);
-        }
-
-        // Example feature: Log the current time
-        function logCurrentTime() {
-            const currentTime = new Date().toLocaleString();
-            console.log(`Current Time: ${currentTime}`);
-        }
-
-        // Example feature: Perform some additional operations
-
-        // Start the process by invoking the resetNotInterestedList function
-        resetNotInterestedList();
-
-        // Return a message indicating that the code is running (optional)
-        return "Running...";
-    } catch (error) {
-        console.error("An error occurred:", error.message);
+    // Helper function to pause execution
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
+
+    // Function to get the list of games you're not interested in
+    async function getNotInterestedGames() {
+        console.log("Fetching your 'Not Interested' list...");
+        const response = await fetch(`${STEAM_API_URL}${NOT_INTERESTED_LIST_ENDPOINT}?t=${new Date().getTime()}`);
+        if (!response.ok) {
+            throw new Error("Couldn't get the 'Not Interested' list. Please try again later.");
+        }
+        const data = await response.json();
+        return Object.keys(data.rgIgnoredApps);
+    }
+
+    // Function to remove a single game from the 'Not Interested' list
+    async function removeGameFromList(gameId) {
+        console.log(`Removing game with ID ${gameId}...`);
+        const formData = new FormData();
+        formData.append("sessionid", g_sessionID);
+        formData.append("appid", gameId);
+        formData.append("remove", 1);
+        formData.append("snr", "1_account_notinterested_");
+
+        const response = await fetch(`${STEAM_API_URL}${REMOVE_APP_ENDPOINT}`, {
+            method: "POST",
+            body: formData,
+        });
+
+        if (!response.ok) {
+            throw new Error(`Failed to remove game ${gameId}. Skipping to next game.`);
+        }
+    }
+
+    // Function to remove all games from the 'Not Interested' list
+    async function removeAllGames(gameList) {
+        console.log("Starting to remove games...");
+        for (let i = 0; i < gameList.length; i++) {
+            try {
+                await removeGameFromList(gameList[i]);
+                console.log(`Removed ${i + 1} out of ${gameList.length} games`);
+                await sleep(PAUSE_INTERVAL); // Wait a bit to avoid overwhelming Steam's servers
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+        console.log("Finished removing all games!");
+        alert("All games have been removed from your 'Not Interested' list.");
+    }
+
+    // Main function to reset the 'Not Interested' list
+    async function resetNotInterestedList() {
+        try {
+            // Get the list of games you're not interested in
+            const notInterestedGames = await getNotInterestedGames();
+
+            // Check if the list is empty
+            if (notInterestedGames.length === 0) {
+                alert("Your 'Not Interested' list is already empty.");
+                return;
+            }
+
+            // Ask for confirmation before proceeding
+            const userWantsToRemove = confirm(`You're about to remove ${notInterestedGames.length} games from your 'Not Interested' list. Do you want to continue?`);
+            
+            if (userWantsToRemove) {
+                // If user confirms, start removing games
+                await removeAllGames(notInterestedGames);
+            } else {
+                console.log("Operation cancelled by user.");
+            }
+        } catch (error) {
+            console.error("An error occurred:", error.message);
+            alert("Something went wrong. Please try again later.");
+        }
+    }
+
+    // Start the process
+    console.log("Starting the process to reset your 'Not Interested' list...");
+    await resetNotInterestedList();
+    console.log("Process completed.");
+
 })();
